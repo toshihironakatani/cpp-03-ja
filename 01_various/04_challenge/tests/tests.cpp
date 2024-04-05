@@ -4,9 +4,9 @@
 
 #include "unique_ptr.hpp"
 
-TEST(Test, Task1) {    
+TEST(Test, Task1) {
     int* ptr = nullptr;
-    unique_int_ptr unique(3);
+    unique_ptr unique(3);
     ASSERT_EQ(*unique.get(), 3);
     ptr = unique.get();
 
@@ -16,12 +16,12 @@ TEST(Test, Task1) {
     ASSERT_EQ(*released_ptr, 3);
 }
 
-TEST(Test, Task2) {    
-    unique_int_ptr unique(3);
+TEST(Test, Task2) {
+    unique_ptr unique(3);
     ASSERT_EQ(*unique, 3);
 }
 
-TEST(Test, Task3) {    
+TEST(Test, Task3) {
     int* int_ptr = nullptr;
     {
     unique_ptr<int> unique(3);
