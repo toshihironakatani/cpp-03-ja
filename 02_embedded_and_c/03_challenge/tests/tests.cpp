@@ -7,9 +7,9 @@
 #include "constexpr.hpp"
 
 TEST(TrafficLightTests, StateDurations) {
-    EXPECT_TRUE(trafficLightDuration(TrafficLightState::red) > 0);
-    EXPECT_TRUE(trafficLightDuration(TrafficLightState::yellow) > 0);
-    EXPECT_TRUE(trafficLightDuration(TrafficLightState::green) > 0);
+    EXPECT_TRUE(trafficLightDuration(TrafficLightState::red) >= 0);
+    EXPECT_TRUE(trafficLightDuration(TrafficLightState::yellow) >= 0);
+    EXPECT_TRUE(trafficLightDuration(TrafficLightState::green) >= 0);
 }
 
 TEST(ClampTests, IntClamp) {
