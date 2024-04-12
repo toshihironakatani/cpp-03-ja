@@ -3,7 +3,7 @@
 
 LedController::LedController() {
   led_init();
-};
+}
 
 void LedController::turnOn() {
   led_on();

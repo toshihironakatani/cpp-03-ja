@@ -1,22 +1,14 @@
 #include "led_controller.hpp"
 #include <iostream>
 
-void show_state(bool state) {
-  if(state) {
-    std::cout << "ON" << std::endl;
-  }
-  else {
-    std::cout << "OFF" << std::endl;
-  }
-}
-
 int main() {
   LedController led;
-  show_state(led.getState());
+
+  std::cout << std::boolalpha << led.getState() << std::endl;
   led.turnOn();
-  show_state(led.getState());
+  std::cout << std::boolalpha << led.getState() << std::endl;
   led.turnOff();
-  show_state(led.getState());
+  std::cout << std::boolalpha << led.getState() << std::endl;
 
   return 0;
 }
