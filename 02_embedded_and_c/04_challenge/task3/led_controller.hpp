@@ -6,6 +6,4 @@ public:
   void turnOn();
   void turnOff();
   bool getState();
-private:
-  bool state;
 };

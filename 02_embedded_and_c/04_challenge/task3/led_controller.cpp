@@ -1,17 +1,18 @@
 #include "led_controller.hpp"
+#include "../task1/led_controller.h"
 
 LedController::LedController() {
-  state = false;
+  led_init();
 };
 
 void LedController::turnOn() {
-  state = true;
+  led_on();
 }
 
 void LedController::turnOff() {
-  state = false;
+  led_off();
 }
 
 bool LedController::getState() {
-  return state;
+  return led_get_state();
 }
